@@ -1,9 +1,9 @@
-; Fonctions
+﻿; Fonctions
 
 Delay()
 {
 	global RNG = 0
-	Random RNG,200,250
+	Random RNG,250,300
 }
 
 Search()
@@ -26,7 +26,7 @@ Search()
 	if ErrorLevel = 0 ; Si >= 94 trouvé
 	{
 	Yessay = 1
-	MsgBox, , , >= 104 detecte`, item suivant, 0.5
+	MsgBox, , , >= 104 détecté`, item suivant, 0.5
 	}
 }
 
@@ -45,7 +45,8 @@ Send {WheelDown}
 Search()
 if Yessay = 1 ; Si >= 94 trouvé en bas à gauche on bloque la macro
 {
-MsgBox, , , L'item en en bas à gauche est déjà à 94
+MsgBox, , , L'item en bas à gauche est déjà à 94
+reload
 }
 Loop
 {
@@ -61,7 +62,7 @@ goto Beginning
 }
 }
 
-MsgBox, , ,Plus aucun item a FM / Aucun item trouve ! ; Quand on sort de la 1ere loop, soit plus d'item à FM soit pas d'item trouvé
+MsgBox, , ,Plus aucun item à FM / Aucun item trouvé ! ; Quand on sort de la 1ere loop, soit plus d'item à FM soit pas d'item trouvé
 return
 
 F2:: ; F2 = Arrêt de tout le script et reload
