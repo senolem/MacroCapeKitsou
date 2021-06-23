@@ -1,9 +1,9 @@
-﻿; Fonctions
+; Fonctions
 
 Delay()
 {
 	global RNG = 0
-	Random RNG,250,300
+	Random RNG,200,250
 }
 
 Search()
@@ -37,17 +37,12 @@ F1:: ; F1 = commencer
 Beginning:
 Loop
 {
+Yessay = 0
 Delay()
 Sleep, %RNG%
 Click, 1250, 685, 2 ; Double click item
 MouseMove, 1374, 602
 Send {WheelDown}
-Search()
-if Yessay = 1 ; Si >= 94 trouvé en bas à gauche on bloque la macro
-{
-MsgBox, , , L'item en bas à gauche est déjà à 94
-reload
-}
 Loop
 {
 Sleep 100
@@ -69,6 +64,3 @@ F2:: ; F2 = Arrêt de tout le script et reload
 MsgBox, , ,Arret d'urgence !, 1
 Reload
 return
-
-
-
